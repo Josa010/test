@@ -97,7 +97,7 @@
 
 	if ($siguientePaso==2) { // Este paso es cuando se enviaron el formulario
 		
-		if ($conexion = @mysqli_connect('bf6zjft0czzavqnbjsr2-mysql.services.clever-cloud.com','uepsd6vezh6wmev4','TLA2UfZyxHgdjiDUNu6N')) {
+		if ($conexion = @mysqli_connect('mysql://uepsd6vezh6wmev4:TLA2UfZyxHgdjiDUNu6N@bf6zjft0czzavqnbjsr2-mysql.services.clever-cloud.com:3306/bf6zjft0czzavqnbjsr2','uepsd6vezh6wmev4','TLA2UfZyxHgdjiDUNu6N')) {
 		if (!mysqli_select_db($conexion, 'bf6zjft0czzavqnbjsr2')) {
 				mysqli_close($conexion); $error['noDB'] = "Error 1002: No se pudo conectar con la base de datos.";
 			}
