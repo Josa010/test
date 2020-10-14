@@ -182,8 +182,8 @@
 			$pass=sha1($pass);
 
 
-			$sentenciaSql="INSERT INTO usuarios(nombre, segundoNombre, apellidoPaterno, apellidoMaterno, correoElectronico, nivel, usuario, pass)
-				VALUES('$nombre', '$segundoNombre', '$apellidoPaterno', '$apellidoMaterno', '$correoElectronico', '$nivel', '$usuario', '$pass')";
+			$sentenciaSql="INSERT INTO usuarios(idCliente, nombre, segundoNombre, apellidoPaterno, apellidoMaterno, correoElectronico, nivel, usuario, pass)
+				VALUES(NULL, '$nombre', '$segundoNombre', '$apellidoPaterno', '$apellidoMaterno', '$correoElectronico', '$nivel', '$usuario', '$pass')";
 
 			if (mysqli_query($conexion,$sentenciaSql)) {
 				$siguientePaso = 3;
