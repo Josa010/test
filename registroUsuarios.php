@@ -183,7 +183,7 @@
 
 
 			$sentenciaSql="INSERT INTO usuarios(idCliente, nombre, segundoNombre, apellidoPaterno, apellidoMaterno, correoElectronico, nivel, usuario, pass)
-				VALUES(NULL, '$nombre', '$segundoNombre', '$apellidoPaterno', '$apellidoMaterno', '$correoElectronico', '$nivel', '$usuario', '$pass')";
+				VALUES('NULL', '$nombre', '$segundoNombre', '$apellidoPaterno', '$apellidoMaterno', '$correoElectronico', '$nivel', '$usuario', '$pass')";
 
 			if (mysqli_query($conexion,$sentenciaSql)) {
 				$siguientePaso = 3;
