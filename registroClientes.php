@@ -1,9 +1,5 @@
 <?php
 
-	// $_POST['nombre']
-	// $_GET['nombre']
-	// $_REQUEST['nombre']
-
 	if (!empty($_POST['nombre'])) {
 
 		$nombre=$_POST['nombre'];
@@ -188,15 +184,22 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Registro de Clientes</title>
+	<title>Registro de Clientes</title>
+	<link rel="stylesheet" href="css/registroClientes.css">
 </head>
 <body>
+
+	<div id="boton-regresar">
+		<a href="index.html" id="regresar">Regresar al indice</a>
+	</div>
+	
+
 	<h1 align="center">Registro de Clientes</h1>
 
 	<?php
 		if (!empty($errores)) {
 			foreach($errores as $error){ // recorremos el arreglo
-				echo "* ". $error. "<br>";
+				echo "<p class='error'>* ". $error. "</p><br>";
 			}
 		}
 	?>
@@ -245,7 +248,7 @@
 			    <td><input type="password" name="passConfirmado" required value="<?php echo $passConfirmado; ?>"></td>
 		    </tr>
 		    <tr>
-			    <td colspan="2"><input type="submit" value="Registrar"></td>
+			    <td colspan="2" id="final"><input type="submit" value="Registrar"></td>
 		    </tr>
 		</table>
 	</form>
